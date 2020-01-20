@@ -1,5 +1,15 @@
 <!DOCTYPE HTML>
 <html>
+	<script type="text/javascript">
+		function ChangeUrl(title, url) {
+			if (typeof (history.pushState) != "undefined") {
+				var obj = { Title: title, Url: url };
+				history.pushState(obj, obj.Title, obj.Url);
+			} else {
+				alert("Browser does not support HTML5.");
+			}
+		}
+		</script>
 	<head>
 		<title>Sillylife</title>
 		<meta charset="utf-8" />
@@ -44,7 +54,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Shubham Ratrey</h2>
-									<p>I'm an Software Developer based out of Mumbai. My interests are developing consumer apps. Outside of work make short movies and click cliche pictures.</p>
+									<p>I'm Software Developer based out of Mumbai. My interests are developing consumer apps. Outside of work make short movies and click cliche pictures.</p>
 									<ul class="actions">
 										<li><a href="m1_detail.html" class="button">Learn more</a></li>
 									</ul>
